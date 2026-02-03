@@ -1,0 +1,14 @@
+# catkin / build
+build/
+devel/
+install/
+# logs & caches
+*.log
+*.pyc
+*.swp
+# editor
+.vscode/
+.idea/
+.DS_Store
+# docker images / tars
+*.tar
