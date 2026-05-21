@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
+*.pyc
 *.egg-info/
 .pytest_cache/
 
@@ -11,7 +12,21 @@ venv/
 # Training artifacts (kept small final ones are force-added)
 runs/
 logs/
+*.log
 *.tmp
+
+# catkin / build
+build/
+devel/
+install/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Docker images / tars
+*.tar
 
 # OS
 .DS_Store
