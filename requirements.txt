@@ -1,0 +1,19 @@
+# Core scientific stack
+numpy>=1.26
+matplotlib>=3.7
+
+# Physics simulation (MuJoCo 3.x -- prebuilt wheels, incl. Apple Silicon)
+mujoco>=3.1
+
+# RL
+gymnasium>=0.29
+stable-baselines3>=2.3
+torch>=2.2
+
+# Rendering / video
+imageio>=2.31
+imageio-ffmpeg>=0.4.9
+pillow>=10.0
+
+# Misc
+tqdm>=4.65

@@ -1,0 +1,295 @@
+<mujoco model="sawyer">
+  <asset>
+    <material name="robot0_Mtl1.017" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl2.017" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000" />
+    <mesh name="robot0_base_0" file="sawyer_meshes/base_0.obj" />
+    <mesh name="robot0_base_1" file="sawyer_meshes/base_1.obj" />
+    <material name="robot0_Mtl1" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl2" specular="0.5" shininess="0.225" rgba="0.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl4" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000" />
+    <material name="robot0_Mtl5" specular="0.5" shininess="0.225" rgba="0.870588 0.309804 0.086275 1.000000" />
+    <material name="robot0_Mtl6" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000" />
+    <material name="robot0_Mtl7" specular="0.5" shininess="0.225" rgba="0.698039 0.698039 0.698039 1.000000" />
+    <material name="robot0_Mtl8" specular="0.5" shininess="0.225" rgba="0.792157 0.819608 0.929412 1.000000" />
+    <material name="robot0_Mtl9" specular="0.5" shininess="0.225" rgba="0.250980 0.250980 0.250980 1.000000" />
+    <material name="robot0_Mtla" specular="0.5" shininess="0.225" rgba="0.000000 0.000000 1.000000 1.000000" />
+    <material name="robot0_Mtlb" specular="0.5" shininess="0.225" rgba="0.290196 0.290196 0.290196 1.000000" />
+    <mesh name="robot0_head_0" file="sawyer_meshes/head_0.obj" />
+    <mesh name="robot0_head_1" file="sawyer_meshes/head_1.obj" inertia="shell" />
+    <mesh name="robot0_head_2" file="sawyer_meshes/head_2.obj" />
+    <mesh name="robot0_head_3" file="sawyer_meshes/head_3.obj" />
+    <mesh name="robot0_head_4" file="sawyer_meshes/head_4.obj" inertia="shell" />
+    <mesh name="robot0_head_5" file="sawyer_meshes/head_5.obj" />
+    <mesh name="robot0_head_6" file="sawyer_meshes/head_6.obj" />
+    <mesh name="robot0_head_7" file="sawyer_meshes/head_7.obj" />
+    <mesh name="robot0_head_8" file="sawyer_meshes/head_8.obj" />
+    <mesh name="robot0_head_9" file="sawyer_meshes/head_9.obj" />
+    <material name="robot0_Mtl1.014" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000" />
+    <material name="robot0_Mtl2.014" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000" />
+    <material name="robot0_Mtl3.013" specular="0.5" shininess="0.225" rgba="0.168627 0.152941 0.141176 1.000000" />
+    <material name="robot0_Mtl4.012" specular="0.5" shininess="0.225" rgba="1.000000 0.403922 0.121569 1.000000" />
+    <material name="robot0_Mtl5.010" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl6.008" specular="0.5" shininess="0.225" rgba="0.792157 0.819608 0.929412 1.000000" />
+    <material name="robot0_Mtl7.007" specular="0.5" shininess="0.225" rgba="0.250980 0.250980 0.250980 1.000000" />
+    <mesh name="robot0_l0_0" file="sawyer_meshes/l0_0.obj" />
+    <mesh name="robot0_l0_1" file="sawyer_meshes/l0_1.obj" />
+    <mesh name="robot0_l0_2" file="sawyer_meshes/l0_2.obj" />
+    <mesh name="robot0_l0_3" file="sawyer_meshes/l0_3.obj" />
+    <mesh name="robot0_l0_4" file="sawyer_meshes/l0_4.obj" />
+    <mesh name="robot0_l0_5" file="sawyer_meshes/l0_5.obj" />
+    <mesh name="robot0_l0_6" file="sawyer_meshes/l0_6.obj" />
+    <material name="robot0_Mtl1.004" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000" />
+    <material name="robot0_Mtl2.004" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl3.003" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000" />
+    <mesh name="robot0_l1_0" file="sawyer_meshes/l1_0.obj" />
+    <mesh name="robot0_l1_1" file="sawyer_meshes/l1_1.obj" />
+    <mesh name="robot0_l1_2" file="sawyer_meshes/l1_2.obj" />
+    <material name="robot0_Mtl1.005" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl2.005" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000" />
+    <material name="robot0_Mtl3.004" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000" />
+    <material name="robot0_Mtl4.003" specular="0.5" shininess="0.225" rgba="0.792157 0.819608 0.929412 1.000000" />
+    <material name="robot0_Mtl5.003" specular="0.5" shininess="0.225" rgba="0.105882 0.105882 0.105882 1.000000" />
+    <mesh name="robot0_l2_0" file="sawyer_meshes/l2_0.obj" />
+    <mesh name="robot0_l2_1" file="sawyer_meshes/l2_1.obj" />
+    <mesh name="robot0_l2_2" file="sawyer_meshes/l2_2.obj" />
+    <mesh name="robot0_l2_3" file="sawyer_meshes/l2_3.obj" />
+    <mesh name="robot0_l2_4" file="sawyer_meshes/l2_4.obj" />
+    <material name="robot0_Mtl1.007" specular="0.5" shininess="0.225" rgba="0.290196 0.290196 0.290196 1.000000" />
+    <material name="robot0_Mtl2.007" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000" />
+    <material name="robot0_Mtl3.006" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl4.005" specular="0.5" shininess="0.225" rgba="0.792157 0.819608 0.929412 1.000000" />
+    <mesh name="robot0_l3_0" file="sawyer_meshes/l3_0.obj" />
+    <mesh name="robot0_l3_1" file="sawyer_meshes/l3_1.obj" />
+    <mesh name="robot0_l3_2" file="sawyer_meshes/l3_2.obj" />
+    <mesh name="robot0_l3_3" file="sawyer_meshes/l3_3.obj" />
+    <material name="robot0_Mtl1.010" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000" />
+    <material name="robot0_Mtl2.010" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl3.009" specular="0.5" shininess="0.225" rgba="0.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl4.008" specular="0.5" shininess="0.225" rgba="0.792157 0.819608 0.929412 1.000000" />
+    <material name="robot0_Mtl5.006" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000" />
+    <material name="robot0_Mtl6.004" specular="0.5" shininess="0.225" rgba="0.749020 0.749020 0.749020 1.000000" />
+    <material name="robot0_Mtl7.004" specular="0.5" shininess="0.225" rgba="0.290196 0.290196 0.290196 1.000000" />
+    <material name="robot0_Mtl8.002" specular="0.5" shininess="0.225" rgba="0.250980 0.250980 0.250980 1.000000" />
+    <mesh name="robot0_l4_0" file="sawyer_meshes/l4_0.obj" />
+    <mesh name="robot0_l4_1" file="sawyer_meshes/l4_1.obj" />
+    <mesh name="robot0_l4_2" file="sawyer_meshes/l4_2.obj" />
+    <mesh name="robot0_l4_3" file="sawyer_meshes/l4_3.obj" />
+    <mesh name="robot0_l4_4" file="sawyer_meshes/l4_4.obj" />
+    <mesh name="robot0_l4_5" file="sawyer_meshes/l4_5.obj" />
+    <mesh name="robot0_l4_6" file="sawyer_meshes/l4_6.obj" />
+    <mesh name="robot0_l4_7" file="sawyer_meshes/l4_7.obj" />
+    <material name="robot0_Mtl1_001" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl2_001" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000" />
+    <material name="robot0_Mtl3_001" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000" />
+    <material name="robot0_Mtl4_001" specular="0.5" shininess="0.225" rgba="0.866667 0.905882 1.000000 1.000000" />
+    <material name="robot0_Mtl5_001" specular="0.5" shininess="0.225" rgba="0.501961 0.501961 0.501961 1.000000" />
+    <mesh name="robot0_l5_0" file="sawyer_meshes/l5_0.obj" />
+    <mesh name="robot0_l5_1" file="sawyer_meshes/l5_1.obj" />
+    <mesh name="robot0_l5_2" file="sawyer_meshes/l5_2.obj" />
+    <mesh name="robot0_l5_3" file="sawyer_meshes/l5_3.obj" />
+    <mesh name="robot0_l5_4" file="sawyer_meshes/l5_4.obj" />
+    <material name="robot0_Mtl1.012" specular="0.5" shininess="0.225" rgba="0.298039 0.298039 0.298039 1.000000" />
+    <material name="robot0_Mtl2.012" specular="0.5" shininess="0.225" rgba="0.282353 0.282353 0.282353 1.000000" />
+    <material name="robot0_Mtl3.011" specular="0.5" shininess="0.225" rgba="0.286275 0.286275 0.286275 1.000000" />
+    <material name="robot0_Mtl4.010" specular="0.5" shininess="0.225" rgba="1.000000 0.000000 0.000000 1.000000" />
+    <material name="robot0_Mtl5.008" specular="0.5" shininess="0.225" rgba="1.000000 1.000000 1.000000 1.000000" />
+    <material name="robot0_Mtl6.006" specular="0.5" shininess="0.225" rgba="1.000000 0.403922 0.121569 1.000000" />
+    <mesh name="robot0_l6_0" file="sawyer_meshes/l6_0.obj" />
+    <mesh name="robot0_l6_1" file="sawyer_meshes/l6_1.obj" />
+    <mesh name="robot0_l6_2" file="sawyer_meshes/l6_2.obj" />
+    <mesh name="robot0_l6_3" file="sawyer_meshes/l6_3.obj" />
+    <mesh name="robot0_l6_4" file="sawyer_meshes/l6_4.obj" />
+    <mesh name="robot0_l6_5" file="sawyer_meshes/l6_5.obj" />
+    <mesh name="gripper0_robotiq_arg2f_base_link" file="sawyer_meshes/robotiq_arg2f_base_link.stl" />
+    <mesh name="gripper0_robotiq_arg2f_85_outer_knuckle" file="sawyer_meshes/robotiq_arg2f_85_outer_knuckle.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_outer_finger" file="sawyer_meshes/robotiq_arg2f_85_outer_finger.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_inner_finger" file="sawyer_meshes/robotiq_arg2f_85_inner_finger.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_inner_knuckle" file="sawyer_meshes/robotiq_arg2f_85_inner_knuckle.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_outer_knuckle_vis" file="sawyer_meshes/robotiq_arg2f_85_outer_knuckle_vis.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_outer_finger_vis" file="sawyer_meshes/robotiq_arg2f_85_outer_finger_vis.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_inner_finger_vis" file="sawyer_meshes/robotiq_arg2f_85_inner_finger_vis.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_inner_knuckle_vis" file="sawyer_meshes/robotiq_arg2f_85_inner_knuckle_vis.stl" scale="0.001 0.001 0.001" />
+    <texture name="skybox" type="skybox" builtin="gradient" rgb1="0.45 0.55 0.7" rgb2="0.08 0.1 0.14" width="256" height="256" />
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.22 0.25 0.30" rgb2="0.27 0.30 0.36" width="300" height="300" />
+    <material name="grid" texture="grid" texrepeat="8 8" reflectance="0.08" />
+  </asset>
+  <worldbody>
+    <geom name="floor" type="plane" size="3 3 0.1" material="grid" group="1" />
+    <light name="top" pos="0.6 0 2.6" dir="0 0 -1" diffuse="0.55 0.55 0.55" />
+    <body name="robot0_base" pos="0 0 0">
+      <camera mode="fixed" name="robot0_robotview" pos="1.0 0 0.4" quat="0.653 0.271 0.271 0.653" />
+      <inertial diaginertia="0 0 0" mass="0" pos="0 0 0" />
+      <body name="robot0_right_arm_base_link" pos="0 0 0">
+        <inertial diaginertia="0.00740351 0.00681776 0.00672942" mass="2.0687" pos="-0.0006241 -2.8025e-05 0.065404" quat="-0.209285 0.674441 0.227335 0.670558" />
+        <geom mesh="robot0_base_0" material="robot0_Mtl2.017" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g0_vis" />
+        <geom mesh="robot0_base_1" material="robot0_Mtl1.017" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g1_vis" />
+        <body name="robot0_right_l0" pos="0 0 0.08">
+          <inertial diaginertia="0.0651588 0.0510944 0.0186218" mass="5.3213" pos="0.024366 0.010969 0.14363" quat="0.894823 0.00899958 -0.170275 0.412573" />
+          <joint axis="0 0 1" limited="true" name="robot0_right_j0" pos="0 0 0" range="-3.0503 3.0503" frictionloss="0.1" damping="60" armature="0.3" />
+          <geom mesh="robot0_l0_0" material="robot0_Mtl7.007" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g2_vis" />
+          <geom mesh="robot0_l0_1" material="robot0_Mtl6.008" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g3_vis" />
+          <geom mesh="robot0_l0_2" material="robot0_Mtl5.010" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g4_vis" />
+          <geom mesh="robot0_l0_3" material="robot0_Mtl4.012" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g5_vis" />
+          <geom mesh="robot0_l0_4" material="robot0_Mtl3.013" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g6_vis" />
+          <geom mesh="robot0_l0_5" material="robot0_Mtl2.014" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g7_vis" />
+          <geom mesh="robot0_l0_6" material="robot0_Mtl1.014" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g8_vis" />
+          <body name="robot0_head" pos="0 0 0.2965">
+            <inertial diaginertia="0.0118334 0.00827089 0.00496574" mass="1.5795" pos="0.0053207 -2.6549e-05 0.1021" quat="0.999993 7.08405e-05 -0.00359857 -0.000626247" />
+            <geom mesh="robot0_head_0" material="robot0_Mtlb" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g9_vis" />
+            <geom mesh="robot0_head_1" material="robot0_Mtla" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g10_vis" />
+            <geom mesh="robot0_head_2" material="robot0_Mtl8" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g11_vis" />
+            <geom mesh="robot0_head_3" material="robot0_Mtl9" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g12_vis" />
+            <geom mesh="robot0_head_4" material="robot0_Mtl7" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g13_vis" />
+            <geom mesh="robot0_head_5" material="robot0_Mtl6" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g14_vis" />
+            <geom mesh="robot0_head_6" material="robot0_Mtl4" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g15_vis" />
+            <geom mesh="robot0_head_7" material="robot0_Mtl2" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g16_vis" />
+            <geom mesh="robot0_head_8" material="robot0_Mtl1" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g17_vis" />
+            <geom mesh="robot0_head_9" material="robot0_Mtl5" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g18_vis" />
+            <body name="robot0_screen" pos="0.03 0 0.105" quat="0.5 0.5 0.5 0.5">
+              <inertial diaginertia="1e-08 1e-08 1e-08" mass="0.0001" pos="0 0 0" />
+            </body>
+            <body name="robot0_head_camera" pos="0.0228027 0 0.216572" quat="0.342813 -0.618449 0.618449 -0.342813">
+              <inertial diaginertia="0 0 0" mass="0" pos="0.0228027 0 0.216572" quat="0.342813 -0.618449 0.618449 -0.342813" />
+            </body>
+          </body>
+          <body name="robot0_right_torso_itb" pos="-0.055 0 0.22" quat="0.707107 0 -0.707107 0">
+            <inertial diaginertia="1e-08 1e-08 1e-08" mass="0.0001" pos="0 0 0" />
+          </body>
+          <body name="robot0_right_l1" pos="0.081 0.05 0.237" quat="0.5 -0.5 0.5 0.5">
+            <inertial diaginertia="0.0224339 0.0221624 0.0097097" mass="4.505" pos="-0.0030849 -0.026811 0.092521" quat="0.424888 0.891987 0.132364 -0.0794296" />
+            <joint axis="0 0 1" limited="true" name="robot0_right_j1" pos="0 0 0" range="-3.8095 2.2736" frictionloss="0.1" damping="60" armature="0.3" />
+            <geom mesh="robot0_l1_0" material="robot0_Mtl3.003" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g19_vis" />
+            <geom mesh="robot0_l1_1" material="robot0_Mtl2.004" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g20_vis" />
+            <geom mesh="robot0_l1_2" material="robot0_Mtl1.004" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g21_vis" />
+            <body name="robot0_right_l2" pos="0 -0.14 0.1425" quat="0.707107 0.707107 0 0">
+              <inertial diaginertia="0.0257928 0.025506 0.00292515" mass="1.745" pos="-0.00016044 -0.014967 0.13582" quat="0.707831 -0.0524761 0.0516007 0.702537" />
+              <joint axis="0 0 1" limited="true" name="robot0_right_j2" pos="0 0 0" range="-3.0426 3.0426" frictionloss="0.1" damping="40" armature="0.2" />
+              <geom mesh="robot0_l2_0" material="robot0_Mtl4.003" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g22_vis" />
+              <geom mesh="robot0_l2_1" material="robot0_Mtl5.003" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g23_vis" />
+              <geom mesh="robot0_l2_2" material="robot0_Mtl3.004" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g24_vis" />
+              <geom mesh="robot0_l2_3" material="robot0_Mtl2.005" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g25_vis" />
+              <geom mesh="robot0_l2_4" material="robot0_Mtl1.005" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g26_vis" />
+              <body name="robot0_right_l3" pos="0 -0.042 0.26" quat="0.707107 -0.707107 0 0">
+                <inertial diaginertia="0.0102404 0.0096997 0.00369622" mass="2.5097" pos="-0.0048135 -0.0281 -0.084154" quat="0.902999 0.385391 -0.0880901 0.168247" />
+                <joint axis="0 0 1" limited="true" name="robot0_right_j3" pos="0 0 0" range="-3.0439 3.0439" frictionloss="0.1" damping="40" armature="0.2" />
+                <geom mesh="robot0_l3_0" material="robot0_Mtl4.005" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g27_vis" />
+                <geom mesh="robot0_l3_1" material="robot0_Mtl3.006" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g28_vis" />
+                <geom mesh="robot0_l3_2" material="robot0_Mtl2.007" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g29_vis" />
+                <geom mesh="robot0_l3_3" material="robot0_Mtl1.007" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g30_vis" />
+                <body name="robot0_right_l4" pos="0 -0.125 -0.1265" quat="0.707107 0.707107 0 0">
+                  <inertial diaginertia="0.0136549 0.0135493 0.00127353" mass="1.1136" pos="-0.0018844 0.0069001 0.1341" quat="0.803612 0.031257 -0.0298334 0.593582" />
+                  <joint axis="0 0 1" limited="true" name="robot0_right_j4" pos="0 0 0" range="-2.9761 2.9761" frictionloss="0.1" damping="12" armature="0.1" />
+                  <geom mesh="robot0_l4_0" material="robot0_Mtl8.002" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g31_vis" />
+                  <geom mesh="robot0_l4_1" material="robot0_Mtl7.004" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g32_vis" />
+                  <geom mesh="robot0_l4_2" material="robot0_Mtl6.004" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g33_vis" />
+                  <geom mesh="robot0_l4_3" material="robot0_Mtl5.006" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g34_vis" />
+                  <geom mesh="robot0_l4_4" material="robot0_Mtl4.008" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g35_vis" />
+                  <geom mesh="robot0_l4_5" material="robot0_Mtl3.009" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g36_vis" />
+                  <geom mesh="robot0_l4_6" material="robot0_Mtl2.010" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g37_vis" />
+                  <geom mesh="robot0_l4_7" material="robot0_Mtl1.010" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g38_vis" />
+                  <body name="robot0_right_arm_itb" pos="-0.055 0 0.075" quat="0.707107 0 -0.707107 0">
+                    <inertial diaginertia="1e-08 1e-08 1e-08" mass="0.0001" pos="0 0 0" />
+                  </body>
+                  <body name="robot0_right_l5" pos="0 0.031 0.275" quat="0.707107 -0.707107 0 0">
+                    <inertial diaginertia="0.00474131 0.00422857 0.00190672" mass="1.5625" pos="0.0061133 -0.023697 0.076416" quat="0.404076 0.9135 0.0473125 0.00158335" />
+                    <joint axis="0 0 1" limited="true" name="robot0_right_j5" pos="0 0 0" range="-2.9761 2.9761" damping="12" frictionloss="0.1" armature="0.1" />
+                    <geom mesh="robot0_l5_0" material="robot0_Mtl5_001" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g39_vis" />
+                    <geom mesh="robot0_l5_1" material="robot0_Mtl4_001" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g40_vis" />
+                    <geom mesh="robot0_l5_2" material="robot0_Mtl2_001" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g41_vis" />
+                    <geom mesh="robot0_l5_3" material="robot0_Mtl1_001" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g42_vis" />
+                    <geom mesh="robot0_l5_4" material="robot0_Mtl3_001" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g43_vis" />
+                    <body name="robot0_right_hand_camera" pos="0.039552 -0.033 0.0695" quat="0.707107 0 0.707107 0">
+                      <inertial diaginertia="0 0 0" mass="0" pos="0.039552 -0.033 0.0695" quat="0.707107 0 0.707107 0" />
+                    </body>
+                    <body name="robot0_right_wrist" pos="0 0 0.10541" quat="0.707107 0.707107 0 0">
+                      <inertial diaginertia="0 0 0" mass="0" pos="0 0 0.10541" quat="0.707107 0.707107 0 0" />
+                    </body>
+                    <body name="robot0_right_l6" pos="0 -0.11 0.1053" quat="0.0616248 0.06163 -0.704416 0.704416">
+                      <inertial diaginertia="0.000360258 0.000311068 0.000214974" mass="0.3292" pos="-8.0726e-06 0.0085838 -0.0049566" quat="0.479044 0.515636 -0.513069 0.491322" />
+                      <joint axis="0 0 1" limited="true" name="robot0_right_j6" pos="0 0 0" range="-4.7124 4.7124" damping="8" frictionloss="0.1" armature="0.06" />
+                      <geom mesh="robot0_l6_0" material="robot0_Mtl6.006" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g44_vis" />
+                      <geom mesh="robot0_l6_1" material="robot0_Mtl5.008" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g45_vis" />
+                      <geom mesh="robot0_l6_2" material="robot0_Mtl4.010" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g46_vis" />
+                      <geom mesh="robot0_l6_3" material="robot0_Mtl3.011" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g47_vis" />
+                      <geom mesh="robot0_l6_4" material="robot0_Mtl2.012" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g48_vis" />
+                      <geom mesh="robot0_l6_5" material="robot0_Mtl1.012" type="mesh" contype="0" conaffinity="0" group="1" name="robot0_g49_vis" />
+                      <body name="robot0_right_hand" pos="0 0 0.024" quat="0.707105 0 0 0.707108">
+                        <camera mode="fixed" name="robot0_eye_in_hand" pos="0.05 0 0" quat="0 0.707108 0.707108 0" fovy="75" />
+                        <body name="gripper0_robotiq_85_adapter_link" pos="0.0 0 0">
+                          <body name="gripper0_eef" pos="0 0 0.145" quat="0.707105 0 0 -0.707105">
+                            <site name="gripper0_grip_site" pos="0 0 0" size="0.01 0.01 0.01" rgba="1 0 0 0.5" type="sphere" group="1" />
+                          </body>
+                          <inertial pos="0 0 0" mass="0.01" diaginertia="0.001 0.001 0.001" />
+                          <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" name="gripper0_hand_visual" mesh="gripper0_robotiq_arg2f_base_link" />
+                          <body name="gripper0_left_outer_knuckle" pos="0 -0.0306011 0.054904" quat="0 0 0 1">
+                            <inertial pos="0.000163875 0.0554825 -0.0100755" quat="0.920541 0.390623 -0.00362953 0.00231744" mass="0.0311462" diaginertia="5.11372e-05 4.89464e-05 4.95906e-06" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" name="gripper0_left_outer_knuckle_visual" mesh="gripper0_robotiq_arg2f_85_outer_knuckle_vis" />
+                            <geom pos="0 0.0315 -0.0041" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" name="gripper0_left_outer_finger_visual" mesh="gripper0_robotiq_arg2f_85_outer_finger_vis" />
+                            <body name="gripper0_left_inner_finger" pos="0 0.0376 0.043">
+                              <inertial pos="0.000199506 0.0032692 0.00175282" quat="0.933621 0.35825 -0.00273441 0.00104851" mass="0.0156391" diaginertia="1.57977e-05 1.51089e-05 1.4647e-06" />
+                              <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" name="gripper0_left_inner_finger_visual" mesh="gripper0_robotiq_arg2f_85_inner_finger_vis" />
+                              <geom size="0.011 0.003175 0.01875" pos="0 -0.0220203 0.03242" type="box" contype="0" conaffinity="0" group="1" rgba="0.9 0.9 0.9 1" name="gripper0_left_fingertip_visual" />
+                            </body>
+                          </body>
+                          <body name="gripper0_left_inner_knuckle" pos="0 -0.0127 0.06142" quat="0 0 0 1">
+                            <inertial pos="0.000123012 0.0507851 0.00103969" quat="0.497203 0.502496 -0.507943 0.492221" mass="0.0271177" diaginertia="2.83809e-05 2.61936e-05 2.81319e-06" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" name="gripper0_left_inner_knuckle_visual" mesh="gripper0_robotiq_arg2f_85_inner_knuckle_vis" />
+                          </body>
+                          <body name="gripper0_right_outer_knuckle" pos="0 0.0306011 0.054904">
+                            <inertial pos="0.000163875 0.0554825 -0.0100755" quat="0.920541 0.390623 -0.00362953 0.00231744" mass="0.0311462" diaginertia="5.11372e-05 4.89464e-05 4.95906e-06" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" name="gripper0_right_outer_knuckle_visual" mesh="gripper0_robotiq_arg2f_85_outer_knuckle_vis" />
+                            <geom pos="0 0.0315 -0.0041" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" name="gripper0_right_outer_finger_visual" mesh="gripper0_robotiq_arg2f_85_outer_finger_vis" />
+                            <body name="gripper0_right_inner_finger" pos="0 0.0376 0.043">
+                              <inertial pos="0.000199506 0.0032692 0.00175282" quat="0.933621 0.35825 -0.00273441 0.00104851" mass="0.0156391" diaginertia="1.57977e-05 1.51089e-05 1.4647e-06" />
+                              <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" name="gripper0_right_inner_finger_visual" mesh="gripper0_robotiq_arg2f_85_inner_finger_vis" />
+                              <geom size="0.011 0.003175 0.01875" pos="0 -0.0220203 0.03242" type="box" contype="0" conaffinity="0" group="1" rgba="0.9 0.9 0.9 1" name="gripper0_right_fingertip_visual" />
+                            </body>
+                          </body>
+                          <body name="gripper0_right_inner_knuckle" pos="0 0.0127 0.06142">
+                            <inertial pos="0.000123012 0.0507851 0.00103969" quat="0.497203 0.502496 -0.507943 0.492221" mass="0.0271177" diaginertia="2.83809e-05 2.61936e-05 2.81319e-06" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" name="gripper0_right_inner_knuckle_visual" mesh="gripper0_robotiq_arg2f_85_inner_knuckle_vis" />
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="robot0_right_l4_2" pos="0 0 0">
+                    <inertial diaginertia="1e-08 1e-08 1e-08" mass="1e-08" pos="1e-08 1e-08 1e-08" quat="0.820473 0.339851 -0.17592 0.424708" />
+                  </body>
+                </body>
+              </body>
+              <body name="robot0_right_l2_2" pos="0 0 0">
+                <inertial diaginertia="1e-08 1e-08 1e-08" mass="1e-08" pos="1e-08 1e-08 1e-08" quat="0.820473 0.339851 -0.17592 0.424708" />
+              </body>
+            </body>
+            <body name="robot0_right_l1_2" pos="0 0 0">
+              <inertial diaginertia="1e-08 1e-08 1e-08" mass="1e-08" pos="1e-08 1e-08 1e-08" quat="0.820473 0.339851 -0.17592 0.424708" />
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <equality />
+  <contact />
+  <actuator>
+    <position name="act_right_j0" joint="robot0_right_j0" kp="4000" forcerange="-80 80" />
+    <position name="act_right_j1" joint="robot0_right_j1" kp="4000" forcerange="-80 80" />
+    <position name="act_right_j2" joint="robot0_right_j2" kp="2000" forcerange="-40 40" />
+    <position name="act_right_j3" joint="robot0_right_j3" kp="2000" forcerange="-40 40" />
+    <position name="act_right_j4" joint="robot0_right_j4" kp="600" forcerange="-9 9" />
+    <position name="act_right_j5" joint="robot0_right_j5" kp="600" forcerange="-9 9" />
+    <position name="act_right_j6" joint="robot0_right_j6" kp="400" forcerange="-9 9" />
+  </actuator>
+  <compiler angle="radian" autolimits="true" />
+  <option timestep="0.002" integrator="implicitfast">
+    <flag contact="disable" />
+  </option>
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.35 0.35 0.35" specular="0 0 0" />
+    <global offwidth="1280" offheight="960" />
+  </visual>
+  <keyframe>
+    <key name="home" qpos="0.0296 -0.9974 -0.6683 0.9166 0.3484 1.745 -0.3187" ctrl="0.0296 -0.9974 -0.6683 0.9166 0.3484 1.745 -0.3187" />
+  </keyframe>
+</mujoco>

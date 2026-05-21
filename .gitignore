@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environment
+.venv/
+venv/
+
+# Training artifacts (kept small final ones are force-added)
+runs/
+logs/
+*.tmp
+
+# OS
+.DS_Store
