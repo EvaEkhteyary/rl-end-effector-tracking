@@ -11,6 +11,9 @@ to noise and control delay using **residual reinforcement learning**.
 > red sphere = current target
 
 > green trail = actual end-effector path
+>
+
+![REAL Sawyer tracking a circle NOT RL: just for FUN](/RealSawyer_4FUN.gif)
 
 ### ▶ Full demo video: circle, figure-8 & moving target
 
@@ -20,9 +23,7 @@ If the embedded player does not load, view
 [`results/tracking_demo.mp4`](results/tracking_demo.mp4) directly (it plays in
 GitHub's file viewer).
 
-If you want to see the Real Sawyer in action for fun :P , view here (not RL):
-[`RealSawyer_4FUN.mp4`](/RealSawyer_4FUN.mp4) directly (it plays in
-GitHub's file viewer).
+
 
 ---
 
