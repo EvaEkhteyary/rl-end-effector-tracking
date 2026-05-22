@@ -33,7 +33,7 @@ Each exposes `position(t)`, `velocity(t)`, `orientation(t)`, `angular_velocity(t
 
 ## 3. MDP design
 
-**Observation — 70D:**
+**Observation (state): 70D:**
 
 | Block | Dim |
 |-------|-----|
