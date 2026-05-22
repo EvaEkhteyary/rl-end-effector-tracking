@@ -51,9 +51,9 @@ Full explanation in **[DESIGN.md](DESIGN.md)**.
 
 
 ## Quickstart
-1. create the virtual environment
+1. create the virtual environment (use python=3.10+)
 ```
-make setup PYTHON=python3.12 #python=3.10+
+make setup PYTHON=python3.12 
 ```
 
 2. activate it in your terminal (you'll see (.venv) appear in your prompt)
