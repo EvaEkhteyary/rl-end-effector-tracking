@@ -13,7 +13,7 @@ observation ──▶ RL policy (PPO, bounded residual) ────────
    q̇_command = lowpass( q̇_base  +  0.6 · π(observation) )
 ```
 
-The **base controller** (resolved-rate, DLS) handles kinematics. The **RL policy** outputs a bounded residual (±0.6 rad/s) to compensate for what the base controller cannot: control delay, dynamics lag, and near-singular behaviour. A **low-pass filter** on the final command guarantees smooth motion by construction. The policy anticipates lag; the filter removes jitter — the two halves are complementary.
+The **base controller** (resolved-rate, DLS) handles kinematics. The **RL policy** outputs a bounded residual (±0.6 rad/s) to compensate for what the base controller cannot: control delay, dynamics lag, and near-singular behaviour. A **low-pass filter** on the final command guarantees smooth motion by construction. The policy anticipates lag; the filter removes jitter, the two halves are complementary.
 
 ---
 
