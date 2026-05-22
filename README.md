@@ -46,147 +46,97 @@ Full reasoning in **[DESIGN.md](DESIGN.md)**.
 
 ---
 
-## Quickstart
+## The idea in one sentence
 
-Requires **Python 3.10+** (developed on 3.12) and a few hundred MB of pip
-dependencies (MuJoCo, Stable-Baselines3, PyTorch — all prebuilt wheels).
+A classical **Jacobian controller** handles the easy part. A trained **PPO policy** fixes the rest — noise, lag, near-singular positions.
 
-```bash
-# 1. set up the environment  (use PYTHON=python3.12 etc. if `python3` is older)
-make setup PYTHON=python3.12
-
-# 2a. reproduce everything from scratch  (~15 min on an 8-core CPU)
-make all
-
-# 2b. ...or just regenerate plots + videos from the included trained model
-make demo
+```
+final command = Jacobian base controller + RL residual correction
 ```
 
-That's it. `make all` runs training → evaluation → video rendering. The
-repository already ships a trained policy (`models/`) and results
-(`results/`), so `make demo` works immediately.
+---
+Full reasoning in **[DESIGN.md](DESIGN.md)**.
 
-Manual invocation (equivalent):
+
+## Quickstart
 
 ```bash
-.venv/bin/python -m src.train      --timesteps 2000000 --n-envs 8
-.venv/bin/python -m src.evaluate   # -> results/*.png, results/metrics.json
-.venv/bin/python -m src.render     # -> results/tracking_demo.mp4
-.venv/bin/python -m src.render --gui   # live interactive viewer
+# 1. create the virtual environment
+make setup PYTHON=python3.12
+
+# 2. activate it in your terminal (you'll see (.venv) appear in your prompt)
+source ./.venv/bin/activate
+
+# 3. run everything
+make all       # train → evaluate → render (~15 min, 8-core CPU)
+make demo      # skip training, use the included model instead
+```
+
+> Note: `source ./.venv/bin/activate` must be run once per terminal session.
+> If you close and reopen the terminal, run it again before any commands.
+
+The repo ships with a trained model (`models/`) and results (`results/`) already included, so `make demo` works immediately with no training needed.
+
+### Manual commands (optional)
+
+Once the environment is activated, you can run each step individually instead of using `make`:
+
+```bash
+python -m src.train       # train the policy
+python -m src.evaluate    # run tests and produce charts
+python -m src.render      # record demo video
+python -m src.render --gui   # live interactive viewer
 ```
 
 ---
 
 ## Results
 
-Every scenario is evaluated **twice under identical, seeded noise**: the pure
-model-based base controller vs. base + RL residual. The gap is what RL adds.
+### Tracking accuracy (position RMSE)
 
-### Tracking accuracy — position RMSE over a full trajectory
+| Trajectory       | Base only | + RL        | Improvement |
+|------------------|----------:|------------:|------------:|
+| Circle           | 24.8 mm   | **6.7 mm**  | **−73%**    |
+| Figure-8         | 35.1 mm   | **8.4 mm**  | **−76%**    |
+| Moving target    | 5.3 mm    | 6.2 mm      | —           |
+| Unreachable      | 288.4 mm  | **51.8 mm** | **−82%**    |
 
-| Trajectory      | Base controller | Base + RL residual | Improvement |
-|-----------------|----------------:|-------------------:|------------:|
-| Circle          | 24.8 mm         | **6.7 mm**         | **−73 %**   |
-| Figure-8        | 35.1 mm         | **8.4 mm**         | **−76 %**   |
-| Moving target   | 5.3 mm          | 6.2 mm             | −18 %       |
-| Unreachable \*  | 288.4 mm        | **51.8 mm**        | **−82 %**   |
+Moving target: base controller already near-optimal, RL has nothing to add — an honest result.
+Unreachable: base controller flails at joint limits. RL degrades gracefully.
 
-\* a circle scaled past the edge of the workspace. The base controller flails
-at the joint limits (288 mm); the residual policy degrades gracefully, stays
-controlled, and is also ~2.4× smoother there. On the slow *moving target* the
-base controller is already near-optimal (~5 mm) so the residual has almost
-nothing to add — an honest wash, both well under 1 cm.
+### Robustness to control delay (figure-8 RMSE, mm)
 
-### Robustness to control delay — figure-8
+| Delay        | 0 ms | 50 ms | 100 ms | 150 ms | 200 ms |
+|--------------|-----:|------:|-------:|-------:|-------:|
+| Base only    | 29.7 | 35.1  | 41.2   | 49.6   | 66.6   |
+| + RL         | 7.6  | 8.4   | 11.4   | 17.7   | 30.8   |
 
-| Control delay | 0 ms | 50 ms | 100 ms | 150 ms | 200 ms |
-|---------------|-----:|------:|-------:|-------:|-------:|
-| Base RMSE     | 29.7 | 35.1  | 41.2   | 49.6   | 66.6   |
-| RL RMSE       | 7.6  | 8.4   | 11.4   | 17.7   | 30.8   |
-| Improvement   |−74 % |−76 %  | −72 %  | −64 %  | −54 %  |
-
-The residual policy keeps tracking error far below the base controller at
-every delay it was trained on (0–200 ms), and joint jerk stays on par with or
-below the base controller — accuracy is *not* bought with jitter.
-
-Figures written to `results/`:
-
-| File | Shows |
-|------|-------|
-| `tracking_3d.png`      | desired vs. actual end-effector path, all 4 scenarios |
-| `error_over_time.png`  | position error vs. time, base vs. RL |
-| `xyz_tracking.png`     | per-axis tracking of the figure-8 |
-| `robustness.png`       | RMSE vs. control delay, base vs. RL |
-| `smoothness.png`       | EE speed profile + joint-jerk comparison |
-| `training_curve.png`   | PPO learning curve |
-| `tracking_demo.mp4`    | rendered video of all three trajectories |
+At 200 ms lag, RL still beats the base controller at zero lag. Trained with **domain randomisation** (0–150 ms delay per episode) — so it anticipates rather than reacts.
 
 ---
 
-## How it works
+## Design
 
-| Component | File | Role |
-|-----------|------|------|
-| Trajectories      | `src/trajectories.py`   | analytic circle / figure-8 / moving-target paths (6-DOF) |
-| Base controller   | `src/base_controller.py`| resolved-rate DLS Jacobian controller |
-| Environment       | `src/arm_env.py`        | MuJoCo sim, residual-RL wrapper, uncertainty injection, reward |
-| Robot model       | `assets/sawyer.xml`     | vendored Sawyer + Robotiq-85 — **self-contained, no downloads** |
-| Model build       | `tools/build_sawyer_model.py` | one-off script that generated the vendored model |
-| Training          | `src/train.py`          | PPO (Stable-Baselines3) |
-| Evaluation        | `src/evaluate.py`       | metrics + plots, base-vs-RL ablation |
-| Rendering         | `src/render.py`         | MP4 / GIF videos, live viewer |
-
-**State (70-D):** joint angles & velocities, current EE pose error, a 5-step
-**preview** of upcoming targets (so the policy *anticipates*), feed-forward
-desired twist, the base controller's command, and the previous action.
-
-**Action (7-D):** residual joint velocity, bounded to ±0.6 rad/s, added to the
-base command and low-pass filtered before reaching the actuators.
-
-**Reward:** Gaussian position + orientation tracking kernels, a sub-centimetre
-precision bonus, and three smoothness penalties (residual magnitude, residual
-jerk, joint speed).
-
-**Uncertainty:** observation noise, action noise, control delay (0–150 ms) and
-over-sized unreachable paths — all randomised per episode during training.
-
-See [DESIGN.md](DESIGN.md) for the complete rationale.
+| | |
+|---|---|
+| **State (70-D)** | joint angles + velocities, EE pose error, 5-step **trajectory preview**, base controller command, previous action |
+| **Action (7-D)** | residual joint velocity, capped ±0.6 rad/s, **low-pass filtered** before reaching motors |
+| **Reward** | Gaussian tracking kernels + sub-cm precision bonus − jerk penalty − action-rate penalty |
+| **Uncertainty** | observation noise, action noise, **control delay 0–150 ms**, unreachable targets — all randomised per episode |
 
 ---
 
-## Repository layout
+## Files
 
-```
-rl-end-effector-tracking/
-├── assets/
-│   ├── sawyer.xml            self-contained Sawyer + Robotiq-85 model
-│   └── sawyer_meshes/        vendored robot meshes
-├── src/
-│   ├── trajectories.py       desired-trajectory definitions
-│   ├── base_controller.py    model-based resolved-rate controller
-│   ├── arm_env.py            Gymnasium environment (residual RL)
-│   ├── train.py              PPO training
-│   ├── evaluate.py           metrics + plots
-│   ├── render.py             video rendering
-│   ├── config.py             all hyper-parameters in one dataclass
-│   └── math_utils.py         quaternion helpers
-├── tools/build_sawyer_model.py   regenerates the vendored Sawyer model
-├── models/                   trained policy
-├── results/                  plots, metrics, videos
-├── DESIGN.md                 design note (state/action/reward, trajectory, evaluation)
-├── Makefile
-└── requirements.txt
-```
+| File | Role |
+|------|------|
+| `src/arm_env.py` | **Gymnasium** environment — simulation, reward, uncertainty injection |
+| `src/train.py` | **PPO** training via Stable-Baselines3 |
+| `src/base_controller.py` | Damped least-squares **Jacobian** controller |
+| `src/trajectories.py` | Analytic circle / figure-8 / random paths (exact feed-forward velocity) |
+| `src/evaluate.py` | Metrics + plots — base vs RL ablation |
+| `src/render.py` | MP4 / GIF recording, live viewer |
+| `src/config.py` | All hyperparameters in one dataclass |
+| `assets/sawyer.xml` | Self-contained Sawyer + Robotiq-85 model — no downloads |
 
----
-
-## Notes
-
-* The Sawyer + Robotiq-85 model is **vendored** into `assets/` (validated
-  kinematics and meshes), so the project is 100 % self-contained — no asset
-  downloads at run time. `tools/build_sawyer_model.py` documents exactly how it
-  was generated (it uses `robosuite` purely as a build-time source).
-* Contacts are disabled: this is a free-space tracking task, so only the arm's
-  gravity, inertia and actuator dynamics matter.
-
----
+Full design rationale in [DESIGN.md](DESIGN.md).
