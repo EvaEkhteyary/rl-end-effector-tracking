@@ -33,7 +33,7 @@ Each exposes `position(t)`, `velocity(t)`, `orientation(t)`, `angular_velocity(t
 
 ## 3. MDP design
 
-**Observation (state): 70D:**
+**a. State: 70-dimensional observation**
 
 | Block | Dim |
 |-------|-----|
@@ -46,9 +46,9 @@ Each exposes `position(t)`, `velocity(t)`, `orientation(t)`, `angular_velocity(t
 
 The policy sees the base controller's output (so it reasons about a correction) and its own previous action (to penalise jerk). All observations pass through the noisy sensor model.
 
-**Action:** 7-D continuous in `[-1, 1]`, scaled by 0.6 rad/s, added to base controller output, then low-pass filtered.
+**b. Action:** 7-D continuous in `[-1, 1]`, scaled by 0.6 rad/s, added to base controller output, then low-pass filtered.
 
-**Reward:**
+**c. Reward:**
 ```
 r =  1.0 · exp(−(e_pos/0.05)²)     # position tracking
    + 0.35 · exp(−(e_ori/0.35)²)    # orientation tracking
