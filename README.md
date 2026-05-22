@@ -73,7 +73,7 @@ train → evaluate → render (~15 min, 8-core CPU)
 ```
 make all
 ```
-or just regenerate plots and videos from te trained model
+or just regenerate plots and videos from the trained model
 ```    
 make demo      
 ```
