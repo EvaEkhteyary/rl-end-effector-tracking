@@ -134,11 +134,11 @@ At 200 ms lag, RL still beats the base controller at zero lag. Trained with **do
 | File | Role |
 |------|------|
 | `src/arm_env.py` | **Gymnasium** environment — simulation, reward, uncertainty injection |
-| `src/train.py` | **PPO** training via Stable-Baselines3 |
+| `src/train.py` | **PPO** (Proximal policy optimization) training via Stable-Baselines3 |
 | `src/base_controller.py` | Damped least-squares **Jacobian** controller |
 | `src/trajectories.py` | Analytic circle / figure-8 / random paths (exact feed-forward velocity) |
 | `src/evaluate.py` | Metrics + plots — base vs RL ablation |
-| `src/render.py` | MP4 / GIF recording, live viewer |
+| `src/render.py` | video: MP4 / GIF recording |
 | `src/config.py` | All hyperparameters in one dataclass |
 | `assets/sawyer.xml` | Self-contained Sawyer + Robotiq-85 model — no downloads |
 
