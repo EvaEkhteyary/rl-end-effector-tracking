@@ -6,13 +6,13 @@ to noise and control delay using **residual reinforcement learning**.
 
 ![Sawyer tracking a circle](results/tracking_circle.gif)
 
-> Sawyer + Robotiq-85 tracking a circle, blue ribbon = desired path,
+> Sawyer + Robotiq-85 tracking a circle, blue ribbon = desired path
 
 > red sphere = current target
 
-> green trail = actual end-effector path.
+> green trail = actual end-effector path
 
-### ▶ Full demo video — circle, figure-8 & moving target
+### ▶ Full demo video: circle, figure-8 & moving target
 
 <video src="https://github.com/EvaEkhteyary/rl-end-effector-tracking/raw/main/results/tracking_demo.mp4" controls muted width="720"></video>
 
@@ -22,7 +22,7 @@ GitHub's file viewer).
 
 ---
 
-## The idea in one sentence
+## Insight
 
 Instead of asking RL to learn a whole controller from scratch, the policy
 learns only a **small bounded correction** on top of a classic model-based
