@@ -39,10 +39,10 @@ near-singular / unreachable configurations.
 
 This buys three things the challenge explicitly asks for:
 
-* **Accuracy** — RL closes the tracking lag of the (filtered) base controller.
-* **Smoothness** — a low-pass command filter plus a bounded residual make
+* **Accuracy**: RL closes the tracking lag of the (filtered) base controller.
+* **Smoothness**: a low-pass command filter plus a bounded residual make
   motion jitter-free *by construction*, reinforced by jerk penalties in the reward.
-* **Robustness** — the policy is *trained on* randomised delay/noise, and the
+* **Robustness**: the policy is *trained on* randomised delay/noise, and the
   base controller is always a stable fallback.
 
 Full reasoning in **[DESIGN.md](DESIGN.md)**.
@@ -129,13 +129,13 @@ At 200 ms lag, RL still beats the base controller at zero lag. Trained with **do
 
 | File | Role |
 |------|------|
-| `src/arm_env.py` | **Gymnasium** environment — simulation, reward, uncertainty injection |
+| `src/arm_env.py` | **Gymnasium** environment: simulation, reward, uncertainty injection |
 | `src/train.py` | **PPO** (Proximal policy optimization) training via Stable-Baselines3 |
 | `src/base_controller.py` | Damped least-squares **Jacobian** controller |
 | `src/trajectories.py` | Analytic circle / figure-8 / random paths (exact feed-forward velocity) |
-| `src/evaluate.py` | Metrics + plots — base vs RL ablation |
+| `src/evaluate.py` | Metrics + plots base vs RL ablation |
 | `src/render.py` | video: MP4 / GIF recording |
 | `src/config.py` | All hyperparameters in one dataclass |
-| `assets/sawyer.xml` | Self-contained Sawyer + Robotiq-85 model — no downloads |
+| `assets/sawyer.xml` | Self-contained Sawyer + Robotiq-85 model |
 
 Full design rationale in [DESIGN.md](DESIGN.md).
