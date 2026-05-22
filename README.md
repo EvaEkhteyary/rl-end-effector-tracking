@@ -57,6 +57,18 @@ Full explanation in **[DESIGN.md](DESIGN.md)**.
 ---
 
 
+## The idea in one sentence
+
+A classical **Jacobian controller** handles the easy part. A trained **PPO policy** fixes the rest — noise, lag, near-singular positions.
+
+```
+final command = Jacobian base controller + RL residual correction
+```
+
+---
+Full reasoning in **[DESIGN.md](DESIGN.md)**.
+
+
 ## Quickstart
 1. create the virtual environment (use python=3.10+)
 ```

@@ -42,11 +42,11 @@ class EnvConfig:
     preview_count: int = 5
     preview_dt: float = 0.15       # seconds between preview samples
 
-    # ---- uncertainty (the "robustness" requirement) ------------------------
-    obs_noise_std: float = 0.005   # rad, gaussian noise on joint encoders
-    ee_obs_noise_std: float = 0.0018  # m, gaussian noise on EE position sensing
-    act_noise_std: float = 0.025   # rad/s, gaussian noise on applied command
-    delay_steps: int = 1           # control-delay (steps the command is buffered)
+    # ---- uncertainty/ reboustness ------------------------
+    obs_noise_std: float = 0.005   # joint encoder noise (rad)
+    ee_obs_noise_std: float = 0.0018  # EE position noise (m)
+    act_noise_std: float = 0.025   # applied command noise (rad/s)
+    delay_steps: int = 1           # nominal control buffer delay (steps)
     domain_rand: bool = True       # randomise the above per-episode during training
     delay_range: Tuple[int, int] = (0, 4)   # up to 200 ms of control delay
     noise_scale_range: Tuple[float, float] = (0.5, 1.6)
@@ -66,8 +66,8 @@ class EnvConfig:
     # ---- base controller gains --------------------------------------------
     kp_pos: float = 5.0
     kp_ori: float = 4.0
-    dls_damping: float = 0.06      # damped-least-squares lambda (singularities)
-    max_joint_vel: float = 2.0     # rad/s, clip on the *total* command
+    dls_damping: float = 0.06      # DLS; regularies near-singular jacobians
+    max_joint_vel: float = 2.0     # total command clip (rad/s)
 
     seed: int = 0
 
