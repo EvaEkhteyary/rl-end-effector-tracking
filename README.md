@@ -19,7 +19,7 @@ GitHub's file viewer).
 
 ---
 
-## TL;DR — the idea
+## The idea in one sentence
 
 Instead of asking RL to learn a whole controller from scratch, the policy
 learns only a **small bounded correction** on top of a classic model-based
@@ -45,17 +45,6 @@ This buys three things the challenge explicitly asks for:
 Full reasoning in **[DESIGN.md](DESIGN.md)**.
 
 ---
-
-## The idea in one sentence
-
-A classical **Jacobian controller** handles the easy part. A trained **PPO policy** fixes the rest — noise, lag, near-singular positions.
-
-```
-final command = Jacobian base controller + RL residual correction
-```
-
----
-Full reasoning in **[DESIGN.md](DESIGN.md)**.
 
 
 ## Quickstart
