@@ -3,6 +3,7 @@
 Teaching a **Sawyer** arm (Rethink Robotics) with a **Robotiq-85** gripper to
 follow a moving 3-D Cartesian trajectory; accurately, smoothly, and robustly
 to noise and control delay using **residual reinforcement learning**.
+* Sawyer in Mujoco tracking a circle (using RL):
 
 ![Sawyer tracking a circle](results/tracking_circle.gif)
 
@@ -12,7 +13,7 @@ to noise and control delay using **residual reinforcement learning**.
 
 > green trail = actual end-effector path
 >
-REAL Sawyer tracking a circle NOT RL: just for FUN
+* REAL Sawyer tracking a circle (NOT RL): just for FUN:
 
 ![REAL Sawyer tracking a circle NOT RL: just for FUN](/FUN.gif)
 
