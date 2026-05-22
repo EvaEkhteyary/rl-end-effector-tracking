@@ -59,15 +59,18 @@ Full reasoning in **[DESIGN.md](DESIGN.md)**.
 
 
 ## Quickstart
-
-```bash
-# 1. create the virtual environment
+1. create the virtual environment
+```
 make setup PYTHON=python3.12
+```
 
-# 2. activate it in your terminal (you'll see (.venv) appear in your prompt)
+2. activate it in your terminal (you'll see (.venv) appear in your prompt)
+
+```
 source ./.venv/bin/activate
-
-# 3. run everything
+```
+3. run everything
+```
 make all       # train → evaluate → render (~15 min, 8-core CPU)
 make demo      # skip training, use the included model instead
 ```
