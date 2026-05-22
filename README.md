@@ -108,7 +108,7 @@ python -m src.render --gui   # live interactive viewer
 | Moving target    | 5.3 mm    | 6.2 mm      | —           |
 | Unreachable      | 288.4 mm  | **51.8 mm** | **−82%**    |
 
-Moving target: base controller already near-optimal, RL has nothing to add — an honest result.
+Moving target: base controller already near-optimal, RL has nothing to add.
 Unreachable: base controller flails at joint limits. RL degrades gracefully.
 
 ### Robustness to control delay (figure-8 RMSE, mm)
@@ -118,7 +118,7 @@ Unreachable: base controller flails at joint limits. RL degrades gracefully.
 | Base only    | 29.7 | 35.1  | 41.2   | 49.6   | 66.6   |
 | + RL         | 7.6  | 8.4   | 11.4   | 17.7   | 30.8   |
 
-At 200 ms lag, RL still beats the base controller at zero lag. Trained with **domain randomisation** (0–150 ms delay per episode) — so it anticipates rather than reacts.
+At 200 ms lag, RL still beats the base controller at zero lag. Trained with **domain randomisation** (0–150 ms delay per episode) so it anticipates rather than reacts.
 
 ---
 
@@ -129,7 +129,7 @@ At 200 ms lag, RL still beats the base controller at zero lag. Trained with **do
 | **State (70-D)** | joint angles + velocities, EE pose error, 5-step **trajectory preview**, base controller command, previous action |
 | **Action (7-D)** | residual joint velocity, capped ±0.6 rad/s, **low-pass filtered** before reaching motors |
 | **Reward** | Gaussian tracking kernels + sub-cm precision bonus − jerk penalty − action-rate penalty |
-| **Uncertainty** | observation noise, action noise, **control delay 0–150 ms**, unreachable targets — all randomised per episode |
+| **Uncertainty** | observation noise, action noise, **control delay 0–150 ms**, unreachable targets, all randomised per episode |
 
 ---
 
