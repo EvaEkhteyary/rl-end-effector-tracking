@@ -20,7 +20,7 @@ If the embedded player does not load, view
 [`results/tracking_demo.mp4`](results/tracking_demo.mp4) directly (it plays in
 GitHub's file viewer).
 
-If you want to see the Real Sawyer in action for fun :-P , view here (not RL):
+If you want to see the Real Sawyer in action for fun :P , view here (not RL):
 [`RealSawyer_4FUN.mp4`](/RealSawyer_4FUN.mp4) directly (it plays in
 GitHub's file viewer).
 
