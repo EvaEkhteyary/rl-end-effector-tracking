@@ -45,7 +45,7 @@ This buys three things the challenge explicitly asks for:
 * **Robustness**: the policy is *trained on* randomised delay/noise, and the
   base controller is always a stable fallback.
 
-Full reasoning in **[DESIGN.md](DESIGN.md)**.
+Full explanation in **[DESIGN.md](DESIGN.md)**.
 
 ---
 
@@ -53,7 +53,7 @@ Full reasoning in **[DESIGN.md](DESIGN.md)**.
 ## Quickstart
 1. create the virtual environment
 ```
-make setup PYTHON=python3.12
+make setup PYTHON=python3.12 #python=3.10+
 ```
 
 2. activate it in your terminal (you'll see (.venv) appear in your prompt)
