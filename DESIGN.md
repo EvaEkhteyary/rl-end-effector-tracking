@@ -4,7 +4,7 @@ Robot: **Sawyer** 7-DOF + **Robotiq-85** gripper, simulated in **MuJoCo**.
 
 ---
 
-## 1. Core idea: residual RL
+## 1. Core idea: residual RL (Reinforcement Learning)
 
 ```
 trajectory ──▶ base controller (DLS Jacobian) ──▶ q̇_base ──┐
