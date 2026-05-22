@@ -12,7 +12,7 @@ to noise and control delay using **residual reinforcement learning**.
 
 > green trail = actual end-effector path
 >
-
+REAL Sawyer tracking a circle NOT RL: just for FUN
 ![REAL Sawyer tracking a circle NOT RL: just for FUN](/FUN.gif)
 
 ### ▶ Full demo video: circle, figure-8 & moving target
