@@ -70,9 +70,13 @@ make setup PYTHON=python3.12
 source ./.venv/bin/activate
 ```
 3. run everything
+train → evaluate → render (~15 min, 8-core CPU)
 ```
-make all       # train → evaluate → render (~15 min, 8-core CPU)
-make demo      # skip training, use the included model instead
+make all
+```
+or just regenerate plots and videos from te trained model
+```    
+make demo      
 ```
 
 > Note: `source ./.venv/bin/activate` must be run once per terminal session.
