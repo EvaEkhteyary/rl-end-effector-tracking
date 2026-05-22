@@ -6,8 +6,9 @@ to noise and control delay using **residual reinforcement learning**.
 
 ![Sawyer tracking a circle](results/tracking_circle.gif)
 
-> Sawyer + Robotiq-85 tracking a circle — blue ribbon = desired path,
-> red sphere = current target, green trail = actual end-effector path.
+> Sawyer + Robotiq-85 tracking a circle, blue ribbon = desired path,
+> red sphere = current target
+> green trail = actual end-effector path.
 
 ### ▶ Full demo video — circle, figure-8 & moving target
 
