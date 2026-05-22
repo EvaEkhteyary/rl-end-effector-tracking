@@ -84,7 +84,7 @@ PPO (Stable-Baselines3), 8 parallel envs, 2M steps, ~12 min on 8-core CPU.
 
 ## 6. Evaluation
 
-Each scenario run twice under identical seeded noise — base controller alone vs. base + RL residual:
+Each scenario run twice under identical seeded noise, base controller alone vs. base + RL residual:
 
 - **Accuracy:** position RMSE / mean / max / final error; orientation RMSE / max
 - **Smoothness:** mean joint jerk (rad/s³), EE speed-profile jitter
